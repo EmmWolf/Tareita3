@@ -1,0 +1,682 @@
+*{
+	box-sizing: border-box;
+}
+
+.ubicacion {
+    background-color: darkgray;
+    width: 103%;
+    height: 53vh;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -6%;
+}
+
+html {
+  	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	
+}
+
+h1{	font-size: 3.5em; }
+h2{	font-size: 1.8em; }
+h3{	font-size: 2em; }
+p{	font-size: 1em;}
+ul{ list-style: none; }
+li{ font-size: 1.25em; }
+
+button{
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 10px 30px;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+	color: white;
+	background-color: DodgerBlue;
+}
+
+button:hover{
+	background-color: rgb(0,0,205);
+}
+
+.contenedor{
+	max-width: 3000px;
+	margin: auto;
+}
+
+.color-acento{ color: rgb(93, 173, 226, 1.0); }
+
+ul{
+	text-decoration: none;
+}
+
+header{
+	background-color: rgb(0, 56, 126, 1.0);
+	position: relative;
+	width: auto;
+}
+
+header .logo{
+	margin: 0;
+	padding: 25px 60px;
+	font-weight: bold;
+	color: rgb(240, 240, 240, 1.0);
+	font-size: 2em;
+	text-align: center;
+}
+
+header .contenedor{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 0;
+}
+
+header nav{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: whitesmoke;
+	font-size: 17px;
+}
+
+header a:hover{
+	color:rgb(0,190,255, 1.0);
+	/*text-shadow: 50px 50px 50px 50px yellow;*/
+}
+
+#hero{
+	display: flex;
+	/*align-items: center;*/
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	height: 100vh; /*ocupa el 90% de la pantalla*/
+	width: auto;
+	color: white;
+	background-image: linear-gradient(
+		0deg,
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.8)
+		)/*Para poner un filtro negro al fondo para crear contraste con las letras*/
+	,url("Img/wallpaper.jpg");
+	background-repeat: no repeat;
+	background-size: cover;/*ocupa toda la pÃƒÆ’Ã‚Â¡gina*/
+	background-position: center center;
+	padding-right: 10px;
+	margin-top: 0;
+	gap:10px;
+}
+
+
+#hero h1{
+	color: white;
+}
+
+#hero button{
+	font-size: 1.25em;
+}
+
+.form{
+	width: 90%;
+	height: 95%;
+	margin: auto;
+	background-color: rgb(1 214 236 / 10%);
+	border-radius: 7px;
+	margin: 6%;
+	padding: 10px;
+	margin-top: 20px;
+	/* margin-left: 10px; */
+	/* margin-right: 10px; */
+}
+
+input{
+	margin: 5px;
+	width: 96%;
+	padding: 12px;
+	font-size: 11px;
+	border-radius: 7px;
+}
+
+textarea{
+	margin: 7px;
+	width: 95.5%;
+	padding: 10px;
+	font-size: 12px;
+	min-width: 100px;
+	min-height: 100px;
+	border-radius: 7px;}
+}
+div.ubicacion{
+	background-color: #686868;
+    padding: 5px;
+    margin-left: -1.5%;
+    margin-right: -3%;
+    height: 100;
+    border-radius: 0px;
+    width: 100%;
+}
+iframe.maps{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%; /* Ajusta la altura del footer segÃƒÆ’Ã‚Âºn sea necesario */
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    color: rgb(100, 100, 100);
+}
+@media (min-width: 400px){
+	.form{
+		height: 55%;
+		margin-bottom: 40px;
+	}
+	.ubicacion{
+		
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 700px){
+	input{
+		font-size: 10px;
+	}
+	textarea{
+		font-size: 11px;
+		min-height: 60px;
+	}
+	header{
+		position: fixed;/*siempre que se usa position fixed, hay que darle el ancho al 100% de nuevo*/
+		width: 100%;
+	}
+	header .contenedor{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+		font-size: 17px;
+	}
+	#hero{
+		width: 100%;
+		height: 100vh; /*ocupa el 90% de la pantalla*/
+	}
+	.form{
+		height: 80%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -115%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 800px){
+	
+	.form{
+		height: 80%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -115%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 900px){
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -85%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1000px){
+	#hero{
+		height: 100vh;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -85%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1100px){
+	#hero{
+		height: 100vh;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -70%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1200px){
+	header a{
+		font-size: 20px;
+	}
+	input{
+		font-size: 12px;
+	}
+	textarea{
+		font-size: 13px;
+	}
+	#hero{
+		height: 105vh; /*ocupa el 90% de la pantalla*/
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -65%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1300px){
+	input{
+		font-size: 14px;
+	}
+	textarea{
+		font-size: 15px;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 15%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -60%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1400px){
+	input{
+		font-size: 14px;
+	}
+	textarea{
+		font-size: 15px;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -55%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1500px){
+	input{
+		font-size: 14px;
+	}
+	textarea{
+		font-size: 15px;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -50%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1600px){
+	input{
+		font-size: 14px;
+	}
+	textarea{
+		font-size: 15px;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -50%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1700px){
+	input{
+		font-size: 14px;
+	}
+	textarea{
+		font-size: 15px;
+	}
+
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -55%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1800px){
+	
+	/* escribir código*/
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -45%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 1900px){
+	
+	/* escribir código*/
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 125vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -41%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+
+}
+@media (min-width: 2000px){
+	header{
+		height: 130px;
+	}
+	header img{
+		width: 170px;
+		height: 120px;
+		padding: 5px;
+		margin-top: 5px;
+	}
+	nav{
+		margin-right: 15px;
+	}
+	p{ 
+		font-size: 2.5em; 
+	}
+	nav a{
+		font-size: 15px;
+	}
+	input{
+		height: 60px;
+		font-size: 25px;
+	}
+	textarea{
+		height: 100px;
+		font-size: 26px;
+	}
+	h2{
+		font-size: 4.5em;
+	}
+	#hero{
+		height: 100vh;
+	}
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 1%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 120vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -60%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 2100px){
+	
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 2%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 120vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -50%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 2200px){
+	
+	.form{
+		height: 70%;
+		width: 50%;
+		margin-bottom: 55px;
+		margin-top: 10%;
+		margin-left: 2%;
+		padding: 5px;
+	}
+	.ubicacion{
+		width: 46.5%;
+		height: 120vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -50%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}
+@media (min-width: 3000px){
+	#hero{
+		height: 100vh;
+	}
+	input{
+		font-size: 20px;
+	}
+	textarea{
+		font-size: 21px;
+	}
+	h2{
+		font-size: 3em;
+	}
+	.form{
+		height: 50%;
+		width: 50%;
+		margin-bottom: 60px;
+		margin-top: 6%;
+		margin-left: 1%;
+	}
+	.ubicacion{
+		width: 46%;
+		height: 120vh;
+		margin-left: 55%;
+	    margin-right: 0%;
+		margin-top: -35%;
+	}
+	iframe.maps{
+		width: 100%;
+		height: 100%
+	}
+}

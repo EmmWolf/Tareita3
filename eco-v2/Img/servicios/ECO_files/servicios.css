@@ -1,0 +1,180 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	display: block;
+	justify-content: center;
+	margin: 0px;
+	margin: 0px;
+
+}
+
+.color-acento{ color: whitesmoke; }
+.color-acento:hover{ color: dodgerblue; }
+p{	font-size: 1.05em;}
+h2{	font-size: 1em; }
+li{ font-size: 1.05em; }
+
+button{
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 10px 30px;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+	color: white;
+	background-color: DodgerBlue;
+}
+
+button:hover{
+	background-color: rgb(0,0,205);
+	box-shadow: rgb(78, 228, 232, 1.0);
+}
+
+header{
+	background-color: rgb(0, 56, 126, 0.7);
+	position: relative;
+}
+
+header .logo{
+	margin: 0;
+	padding: 25px 60px;
+	font-weight: bold;
+	color: rgb(240, 240, 240, 1.0);
+	font-size: 2em;
+	text-align: center;
+}
+
+header .contenedor{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header nav{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: whitesmoke;
+	font-size: 17px;
+}
+
+header a:hover{
+	color:rgb(0,190,255, 1.0);
+	/*text-shadow: 50px 50px 50px 50px yellow;*/
+}
+
+#services {
+	text-align: center;
+	padding: 140px 10px;
+	margin-top: 500px;
+}
+
+.caja{
+	padding: 20px;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.carrusel{
+	display: flex;
+	gap: 100px;
+}
+
+.carrusel ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.carrusel-fotos{
+	display: flex;
+	gap: 10px;
+	overflow: auto;
+}
+
+.carrusel-fotos img{
+	background:ghostwhite; 
+	border:3px solid black; 
+	width: 200px; 
+	height: 200px; 
+	object-fit: contain; 
+	border-radius: 50%;
+}
+
+.carrusel-menu{
+	display: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Ajusta la altura del footer según sea necesario */
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    color: rgb(100, 100, 100);
+}
+
+@media screen and (min-width: 500px){
+
+	p{	font-size: 1.25em;}
+	h2{	font-size: 1.5em; }
+	li{ font-size: 1.25em; }
+
+	header{
+		position: fixed;/*siempre que se usa position fixed, hay que darle el ancho al 100% de nuevo*/
+		width: 100%;
+	}
+
+	header .contenedor{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+		font-size: 17px;
+	}
+
+	.carrusel-fotos{
+		overflow: hidden;
+	}
+	
+	.carrusel-fotos img{
+		width: 400px;
+		height: 400px;
+	}
+
+	.carrusel-menu{
+		display: block;
+	}
+	.carrusel-menu img{
+		width: 95px;
+		height: 65px;
+		border: 5px solid black;
+		box-sizing: border-box;
+	}
+
+	.carrusel-menu img:hover{
+		border: none;
+	}
+}
